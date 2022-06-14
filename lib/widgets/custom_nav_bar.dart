@@ -9,17 +9,24 @@ import '../util/data.dart';
 class CustomNavBar extends StatelessWidget {
   const CustomNavBar({Key? key}) : super(key: key);
 
+  
+
   @override
   Widget build(BuildContext context) {
+
+    bool keyboardIsOpen = MediaQuery.of(context).viewInsets.bottom != 0;
     return Consumer<NavigationProvider>(
       builder: (context,navProvider,_) => Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          onPressed: (){
-            navProvider.currentIndex = 1;
-          },
-          backgroundColor: Theme.of(context).highlightColor,
-          child: const Icon(Icons.add ,color: Colors.white),
+        floatingActionButton: Visibility(
+          visible: !keyboardIsOpen,
+          child: FloatingActionButton(
+            onPressed: (){
+              navProvider.currentIndex = 1;
+            },
+            backgroundColor: Theme.of(context).highlightColor,
+            child: const Icon(Icons.add ,color: Colors.white),
+          ),
         ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Theme.of(context).highlightColor,
