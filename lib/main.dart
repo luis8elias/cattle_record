@@ -1,4 +1,5 @@
 import 'package:cattle_record/providers/navigation_provider.dart';
+import 'package:cattle_record/providers/sex_selection_provider.dart';
 import 'package:cattle_record/widgets/custom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
         ),
         home: MultiProvider(
           providers: [
-            ChangeNotifierProvider(create: (context)=> NavigationProvider())
+            ChangeNotifierProvider(create: (context)=> NavigationProvider()),
+            ChangeNotifierProvider(create: (context)=> SexSelectionProvider())
           ],
           child: const CustomNavBar() 
         )
