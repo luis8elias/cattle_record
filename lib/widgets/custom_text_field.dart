@@ -3,7 +3,7 @@ class CustomTextField extends StatelessWidget {
 
   final String label;
   final TextEditingController controller;
-  final FocusNode focusNode;
+  final FocusNode? focusNode;
   final FocusNode? nextFocusNode;
   final bool isExtended;
 

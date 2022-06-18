@@ -1,4 +1,5 @@
 import 'package:cattle_record/pages/add_page.dart';
+import 'package:cattle_record/pages/export_page.dart';
 import 'package:cattle_record/pages/list_page.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +10,7 @@ class Data{
   static final List<Widget> bottomPages = [
     const ListPage(),
     const AddPage(),
-    Container(),
-    
+    const ExportPage(),
   ];
  
   static final List<BottomNavigationBarItem> bottomElements = [
