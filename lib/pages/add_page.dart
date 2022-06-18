@@ -65,7 +65,7 @@ class _AddPageState extends State<AddPage> {
       if (!mounted) return;
 
       setState(() {
-        labelController.text = barcodeScanRes;
+        labelController.text = barcodeScanRes == '-1' ? '' : barcodeScanRes;
       });
     }
 
