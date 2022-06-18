@@ -1,3 +1,4 @@
+import 'package:cattle_record/providers/count_elements.dart';
 import 'package:cattle_record/providers/navigation_provider.dart';
 import 'package:cattle_record/providers/sex_selection_provider.dart';
 import 'package:cattle_record/widgets/custom_nav_bar.dart';
@@ -33,7 +34,8 @@ class MyApp extends StatelessWidget {
         home: MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (context)=> NavigationProvider()),
-            ChangeNotifierProvider(create: (context)=> SexSelectionProvider())
+            ChangeNotifierProvider(create: (context)=> SexSelectionProvider()),
+            ChangeNotifierProvider(create: (context)=> CountElementsProvider())
           ],
           child: const CustomNavBar() 
         )

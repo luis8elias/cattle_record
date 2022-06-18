@@ -1,4 +1,5 @@
 import 'package:cattle_record/pages/add_page.dart';
+import 'package:cattle_record/pages/list_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -6,7 +7,7 @@ import 'package:flutter/material.dart';
 class Data{
   
   static final List<Widget> bottomPages = [
-    Container(),
+    const ListPage(),
     const AddPage(),
     Container(),
     
